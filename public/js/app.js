@@ -1,7 +1,7 @@
  console.log("This is a client side js file")
 
  const fetching = (loc, message1, message2) => {
-    fetch(`http://localhost:3000/weather?address=${encodeURIComponent(loc)}`).then((res) => {
+    fetch(`/weather?address=${encodeURIComponent(loc)}`).then((res) => {
      res.json().then((data) => {
          if(data.error)
             return message1.textContent = data.error
